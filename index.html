@@ -12,98 +12,230 @@
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/founderio.png" type="image/png">
     <style>
-        @media (min-width: 768px) {
-            #founderio-card {
-                width: 750px;
-                margin-top: 150px;
-            }
+        #wrapper {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
         }
+
+        #avatar-area {
+            /* common */
+            position: relative;
+            padding: 30px;
+
+            /* large screens */
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 30%;
+            height: 100%;
+            text-align: right;
+        }
+
+        #content-area {
+            /* common */
+            position: relative;
+            padding: 30px;
+
+            /* large screens */
+            position: absolute;
+            left: 30%;
+            top: 0px;
+            right: 0px;
+            height: 100%;
+        }
+
+        #avatar {
+            width: 200px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        #ack-wide {
+            /* large screens */
+            display: block;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+        }
+
+        #ack-small {
+            /* large screens */
+            display: none;
+        }
+
         .bg-dark-founderio {
-            background-color: #336666!important;
+            background-color: #336666 !important;
         }
+
+        body,
         .bg-founderio {
-            background-color: #CCFFFF!important;
+            background-color: #CCFFFF !important;
             /*#060416!important;*/
         }
+
         .text-founderio {
-            color: #333366!important;
+            color: #333366 !important;
             /*#53c72b!important;*/
+        }
+
+        .text-leftlinks {
+            color: #CCFFFF !important;
+        }
+
+        .text-bottomlinks {
+            color: #333366 !important;
+        }
+
+        h1 span {
+            /* common */
+            display: block;
+            text-align: left;
+        }
+
+        .smallline {
+            line-height: 0.6em;
+        }
+
+        .container {
+            text-align: left;
+        }
+
+        @media (max-width: 880px) {
+            /* small screens */
+
+            #avatar-area {
+                left: 0px;
+                top: 0px;
+                right: 0px;
+
+                width: 100%;
+                height: 260px;
+
+                text-align: center;
+            }
+
+            #content-area {
+                left: 0px;
+                top: 260px;
+                bottom: 0px;
+                right: 0px;
+
+                width: 100%;
+                height: unset;
+
+                text-align: center;
+            }
+
+            #ack-wide {
+                display: none;
+            }
+
+            #ack-small {
+                margin-top: 30px;
+                display: block;
+                text-align: center;
+            }
+
+            h1 span {
+                text-align: center;
+            }
         }
     </style>
     <title>founderio</title>
 </head>
 
-<body class="bg-dark-founderio">
-    <div class="card text-white bg-founderio mx-auto" id="founderio-card">
-        <div class="card-body" itemscope="" itemtype="https://schema.org/Person">
-            <meta itemprop="gender" content="Male" />
-            <meta itemprop="email" content="oliver.kahrmann@gmail.com" />
-            <meta itemprop="url" content="https://founderio.net" />
-            <meta itemprop="name" content="Oliver Kahrmann" />
-            <meta itemprop="alternateName" content="founderio" />
-            <meta itemprop="sameAs" content="https://www.youtube.com/channel/UCp_k3jurSe_z_pL0n1AcUDQ" />
-            <meta itemprop="sameAs" content="https://twitter.com/founderio_dhx" />
-            <meta itemprop="sameAs" content="https://github.com/founderio" />
-            <meta itemprop="sameAs" content="https://t.me/founderio" />
-            <meta itemprop="sameAs" content="https://stackoverflow.com/users/1792734/founderio" />
-            <meta itemprop="sameAs" content="https://stackexchange.com/users/2001910/founderio" />
-            <meta itemprop="sameAs" content="https://plus.google.com/u/0/118133897254415260663" />
-            <meta itemprop="sameAs" content="https://www.linkedin.com/in/oliver-kahrmann-03740596/" />
-            <meta itemprop="sameAs" content="https://www.xing.com/profile/Oliver_Kahrmann" />
-            <div class="media">
-                <img class="rounded d-flex mr-3" src="img/founderio.png" alt="founderio" />
-                <div class="media-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <h1 class="text-founderio" style="font-size: 1.9em; white-space: nowrap;">founderio :: Oliver Kahrmann</h1>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-7">
-                                <a href="mailto:oliver.kahrmann@gmail.com" class="text-founderio" rel="me"><span class="icon-mail-founderio">oliver.kahrmann@gmail.com</span></a>
-                            </div>
-                            <div class="col">
-                                <a href="https://www.youtube.com/channel/UCp_k3jurSe_z_pL0n1AcUDQ" class="text-founderio" rel="me"><span class="icon-youtube-founderio">Oliver Kahrmann</span></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-7">
-                                <a href="https://twitter.com/founderio_dhx" class="text-founderio" rel="me"><span class="icon-twitter-founderio">@founderio_dhx</span></a>
-                            </div>
-                            <div class="col">
-                                <a href="https://github.com/founderio" class="text-founderio" rel="me"><span class="icon-github-founderio">founderio</span></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-7">
-                                <a href="https://t.me/founderio" class="text-founderio" rel="me"><span class="icon-telegram-founderio">founderio</span></a>
-                            </div>
-                            <div class="col">
-                                <a href="https://stackoverflow.com/users/1792734/founderio" class="text-founderio" rel="me"><span class="icon-stackoverflow-founderio">founderio</span></a>
-                            </div>
-                        </div>
-                        <br/>
-                        <div class="row">
-                            <div class="col text-founderio">
-                                Other places to find me:
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <a href="https://github.com/team-io" class="text-founderio"><span class="icon-github-founderio">Team I/O</span></a>
-                            </div>
-                        </div>
+<body>
+    <div id="wrapper" itemscope="" itemtype="https://schema.org/Person">
+        <meta itemprop="gender" content="Male" />
+        <meta itemprop="email" content="oliver.kahrmann@gmail.com" />
+        <meta itemprop="url" content="https://founderio.net" />
+        <meta itemprop="name" content="Oliver Kahrmann" />
+        <meta itemprop="alternateName" content="founderio" />
+        <meta itemprop="sameAs" content="https://www.youtube.com/channel/UCp_k3jurSe_z_pL0n1AcUDQ" />
+        <meta itemprop="sameAs" content="https://twitter.com/founderio_dhx" />
+        <meta itemprop="sameAs" content="https://github.com/founderio" />
+        <meta itemprop="sameAs" content="https://t.me/founderio" />
+        <meta itemprop="sameAs" content="https://stackoverflow.com/users/1792734/founderio" />
+        <meta itemprop="sameAs" content="https://stackexchange.com/users/2001910/founderio" />
+        <meta itemprop="sameAs" content="https://plus.google.com/u/0/118133897254415260663" />
+        <meta itemprop="sameAs" content="https://www.linkedin.com/in/oliver-kahrmann-03740596/" />
+        <meta itemprop="sameAs" content="https://www.xing.com/profile/Oliver_Kahrmann" />
+
+        <div id="avatar-area" class="bg-dark-founderio">
+            <img id="avatar" src="img/founderio.png" alt="founderio" />
+
+            <div id="ack-wide">
+                <a href="ack.html" class="text-leftlinks">Acknowledgements</a><br />
+                <a href="https://github.com/founderio/founderio.net" class="text-leftlinks"><span
+                        class="icon-github-founderio"></span>View source on GitHub</a>
+            </div>
+        </div>
+        <div id="content-area" class="bg-founderio">
+            <h1 class="text-founderio" style="font-size: 1.9em; white-space: nowrap;"><span>founderio</span><span
+                    class="smallline">&middot;&middot;</span><span>Oliver Kahrmann</span></h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-7">
+                        <a href="mailto:oliver.kahrmann@gmail.com" class="text-founderio" rel="me"><span
+                                class="icon-mail-founderio">oliver.kahrmann@gmail.com</span></a>
+                    </div>
+                    <div class="col">
+                        <a href="https://www.youtube.com/channel/UCp_k3jurSe_z_pL0n1AcUDQ" class="text-founderio"
+                            rel="me"><span class="icon-youtube-founderio">Oliver Kahrmann</span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-7">
+                        <a href="https://twitter.com/founderio_dhx" class="text-founderio" rel="me"><span
+                                class="icon-twitter-founderio">@founderio_dhx</span></a>
+                    </div>
+                    <div class="col">
+                        <a href="https://github.com/founderio" class="text-founderio" rel="me"><span
+                                class="icon-github-founderio">founderio</span></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-7">
+                        <a href="https://t.me/founderio" class="text-founderio" rel="me"><span
+                                class="icon-telegram-founderio">founderio</span></a>
+                    </div>
+                    <div class="col">
+                        <a href="https://stackoverflow.com/users/1792734/founderio" class="text-founderio"
+                            rel="me"><span class="icon-stackoverflow-founderio">founderio</span></a>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col text-founderio">
+                        Other places to find me:
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="https://github.com/team-io" class="text-founderio"><span
+                                class="icon-github-founderio">Team I/O</span></a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="card-footer">
-            <a href="ack.html" class="text-founderio">Acknowledgements</a>
-            <span class="text-founderio">&middot;</span>
-            <a href="https://github.com/founderio/founderio.net" class="text-founderio"><span class="icon-github-founderio"></span>View source on GitHub</a>
+
+            <div id="ack-small">
+                <div style="margin-left:auto;margin-right:auto;">
+                    <a href="ack.html" class="text-bottomlinks">Acknowledgements</a><br />
+                    <a href="https://github.com/founderio/founderio.net" class="text-bottomlinks"><span
+                            class="icon-github-founderio"></span>View source on GitHub</a>
+                </div>
+            </div>
         </div>
     </div>
+
 </body>
 
 </html>
