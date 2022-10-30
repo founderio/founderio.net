@@ -1,0 +1,41 @@
+@media (min-width: 768px) {
+	#founderio-card {
+		width: 750px;
+		margin-top: 150px;
+	}
+}
+
+.bg-dark-founderio {
+	background-color: #336666 !important;
+}
+
+.bg-founderio {
+	background-color: #CCFFFF !important;
+	/*#060416!important;*/
+}
+
+.text-founderio {
+	color: #333366 !important;
+	/*#53c72b!important;*/
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	line-height: 1em;
+	margin-right: .2em;
+	margin-left: .2em;
+	text-align: center;
+}
+
+.icon-cubiest {
+	display: inline-block;
+	vertical-align: text-top;
+	width: 1em;
+	height: 1em;
+	line-height: 1em;
+	margin-right: .2em;
+	margin-left: .2em;
+}
